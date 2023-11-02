@@ -1,10 +1,18 @@
 import React from "react";
 import background from "../assets/bg1.jpg";
 import logo from "../assets/logo-orange.png";
+import { useNavigate } from "react-router";
+
 
 const Accueil = () => {
+  const navigate = useNavigate();
+
+  const getNewSession = () => {
+    navigate("/order")
+  }
+
   return (
-    <div className="w-screen h-screen relative">
+    <div className="w-screen h-screen relative ">
       <div className="w-full h-full bg-[#000] opacity-50 absolute"></div>
       <div className="w-screen h-screen">
         <img
@@ -23,8 +31,8 @@ const Accueil = () => {
             Bienvenue Chez Nous !
           </div>
           <div className="font-semibold letter-spacing-10">CONNECTEZ-VOUS </div>
-          <div className="flex gap-5 hover:bg-[#d8891b] items-center justify-center rounded-md cursor-pointer duration-500 transition-all  font-bold px-10 font-Roboto py-5 bg-[#ff9f1b]">
-            <span className="text-[2.5rem]">Accéder à mon espace </span>
+          <div className="flex gap-5 hover:bg-[#af7017] items-center justify-center rounded-md cursor-pointer duration-500 transition-all  font-bold px-10 font-Roboto py-5 bg-[#ff9f1b]">
+            <span className="text-[2.5rem]" onClick={getNewSession}>Accéder à mon espace </span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
