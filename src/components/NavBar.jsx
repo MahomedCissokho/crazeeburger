@@ -22,7 +22,7 @@ const NavBar = () => {
 
 
   return (
-    <div>
+    <div adminValue={checked}>
         <div className="w-screen h-screen  -z-50 flex flex-row flex-wrap gap-5 bg-[#fc980c] relative">
         <img src={pattern} alt="pattern" className="w-64 h-64" />
         <img src={pattern} alt="pattern" className="w-64 h-64" />
